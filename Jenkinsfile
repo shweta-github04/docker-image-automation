@@ -15,10 +15,6 @@ pipeline {
             stage('pkr build') {      
                 steps {
                     sh 'packer build packer/image.json'
-                }
-            stage('Image list') {      
-                steps {
-                    sh 'docker image ls'
                 }		    
             }               
 				
