@@ -18,7 +18,8 @@
    "post-processors": [
 	{
 	  "type": "docker-tag",
-	  "tag": "shweta"
+	  "repository": "nginx-packer",		
+	  "tag": "v1"
 	}
   ]	
 }
