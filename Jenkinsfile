@@ -16,6 +16,10 @@ pipeline {
                 steps {
                     sh 'packer build packer/image.json'
                 }
+            stage('Image list') {      
+                steps {
+                    sh 'docker image ls'
+                }		    
             }               
 				
         }
