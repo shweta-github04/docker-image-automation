@@ -1,0 +1,18 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "nginx",
+      "commit": "true"
+     }
+   ],
+   
+   "provisioners": [
+    {
+      "type": "file",
+      "source": "index.html",
+      "destination": "/usr/share/nginx/html/index.html"
+     }
+	]
+}
+
