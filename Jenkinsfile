@@ -8,6 +8,7 @@ pipeline {
         stages {
             stage('pkr inspect') {     
                 steps {
+		    sh 'echo $AWS_ACCESS_KEY_ID'
                     sh 'packer inspect packer/image.json'
                 }
             }
