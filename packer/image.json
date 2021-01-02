@@ -29,6 +29,10 @@
 	},	   
        {
         "type":"docker-push"
+        "ecr_login": true,
+        "aws_access_key": "",
+        "aws_secret_key": "",
+        "login_server": "https://096961528614.dkr.ecr.us-east-1.amazonaws.com/test/"
       }   
     ]
   ]
