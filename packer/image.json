@@ -23,7 +23,7 @@
 	},
 	{
 	  "type": "docker-tag",
-	  "repository": "096961528614.dkr.ecr.us-east-1.amazonaws.com/packer-docker",		
+	  "repository": "096961528614.dkr.ecr.us-east-1.amazonaws.com/096961528614.dkr.ecr.us-east-1.amazonaws.com/packer-docker",		
 	  "tag": "v1"
 	},	   
        {
