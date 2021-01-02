@@ -20,7 +20,10 @@
 	  "type": "docker-tag",
 	  "repository": "345940305659.dkr.ecr.us-east-1.amazonaws.com/test",		
 	  "tag": "v1"
-	}
+	},
+	{   
+	  "type": "docker-push"  
+	}		   
   ]	
 }
 
