@@ -18,7 +18,7 @@
    "post-processors": [
 	{
 	  "type": "docker-tag",
-	  "repository": "packer-docker",		
+	  "repository": "096961528614.dkr.ecr.us-east-1.amazonaws.com/packer-docker",		
 	  "tag": "v1"
 	},
 	{
