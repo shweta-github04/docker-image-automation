@@ -7,8 +7,7 @@
      }
    ],
    
-   "provisioners": [
-    [	   	   
+   "provisioners": [  	   
     {
       "type": "file",
       "source": "app/index.html",
@@ -17,6 +16,7 @@
   ],
 
    "post-processors": [
+      [
 	{
 	  "type": "docker-tag",
 	  "repository": "096961528614.dkr.ecr.us-east-1.amazonaws.com/packer-docker",		
