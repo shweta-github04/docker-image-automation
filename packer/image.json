@@ -1,8 +1,4 @@
 {
-  "variables": {
-    "aws_access_key": "$AWS_ACCESS_KEY_ID",
-    "aws_secret_key": "$AWS_SECRET_ACCESS_KEY"
-  },
   "builders": [
     {
       "type": "docker",
@@ -30,14 +26,13 @@
 	  "type": "docker-tag",
 	  "repository": "096961528614.dkr.ecr.us-east-1.amazonaws.com/096961528614.dkr.ecr.us-east-1.amazonaws.com/packer-docker",		
 	  "tag": "v1"
-	},
-	{
-	  "type": "shell-local",
-	  "inline": "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 096961528614.dkr.ecr.us-east-1.amazonaws.com"
 	},	      
        {
-        "type":"docker-push",      
-        "login_server": "https://096961528614.dkr.ecr.us-east-1.amazonaws.com/test/"
+        "type": "docker-push",
+	"ecr_login": true,
+	"aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+	"aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",  
+        "login_server": "https://096961528614.dkr.ecr.us-east-1.amazonaws.com/test"
       }   
     ]
   ]
