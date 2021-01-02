@@ -1,4 +1,9 @@
 {
+  "variables": {
+    "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+  },
+
   "builders": [
     {
       "type": "docker",
@@ -30,8 +35,8 @@
        {
         "type": "docker-push",
 	"ecr_login": true,
-	"aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-	"aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",  
+	"aws_access_key": "{{user `aws_access_key`}}",
+	"aws_secret_key": "{{user `aws_secret_key`}}",  
         "login_server": "https://096961528614.dkr.ecr.us-east-1.amazonaws.com/test"
       }   
     ]
