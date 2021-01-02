@@ -28,10 +28,10 @@
 	  "tag": "v1"
 	},	   
        {
-        "type":"docker-push"
+        "type":"docker-push",
         "ecr_login": true,
-        "aws_access_key": "",
-        "aws_secret_key": "",
+        "aws_access_key": "AWS_ACCESS_KEY_ID",
+        "aws_secret_key": "AWS_SECRET_ACCESS_KEY",
         "login_server": "https://096961528614.dkr.ecr.us-east-1.amazonaws.com/test/"
       }   
     ]
